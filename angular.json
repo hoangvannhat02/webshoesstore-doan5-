@@ -27,7 +27,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["src/assets/my-ui/javascript/main.js"]
           },
           "configurations": {
             "production": {

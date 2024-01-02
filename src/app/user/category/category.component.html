@@ -1,0 +1,208 @@
+<app-header></app-header>
+<div class="container breadcrumb">
+    <div class="grid wide">
+        <div class="row">
+            <div class="col c-12 m-12 l-12 breadcrumb_box">
+                <a href="index.html">Trang chủ</a> <span>/</span> <a href="category.html">Tất cả sản phẩm</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="container">
+    <div class="grid wide">
+        <div class="row">
+            <div class="col c-12 m-12 l-3 slidebar_index">
+                <div class="aside-title">
+                    <h2 class="title-header">
+                        DANH MỤC SẢN PHẨM
+                    </h2>
+                </div>
+                <div class="aside-content">
+                    <nav class="nav-category">
+                        <ul class="nav">
+                            <li class="nav-item" *ngFor="let item of categoryproducts">
+                                <div class="box-item">
+                                    <a class="nav-link" routerLink="/category/{{ item.MaLoai }}">
+                                        <div class="nav-dash"></div>
+                                        {{ item.TenLoai }}
+                                    </a>
+                                    <i class="fa-solid fa-angle-right"></i>
+
+                                </div>
+                                <!-- <ul class="dropdown-menu">
+                                    <li><i class="fa-solid fa-star"></i><a href="#">Sandal xỏ ngón</a></li>
+                                    <li><i class="fa-solid fa-star"></i><a href="#">Sandal thường</a></li>
+                                    <li><i class="fa-solid fa-star"></i><a href="#">Sandal Mỹ</a></li>
+                                    <li><i class="fa-solid fa-star"></i><a href="#">Sandal Việt Nam</a></li>
+                                </ul> -->
+                            </li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="aside-item">
+                    <div class="aside-title">
+                        <h2 class="title-header">
+                            <a href="#">SẢN PHẨM BÁN CHẠY</a>
+                        </h2>
+                    </div>
+
+                    <div class="item_product_main">
+                        <form action="" class="product-action">
+                            <div class="product-thumbnail">
+                                <a href="#"><img></a>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-img">
+                                    <a href="#">Tên sản phẩm</a>
+                                </h3>
+
+                                <div class="price-box">
+                                    100.000đ
+                                    <!-- <span class="compare-price">800.000đ</span> -->
+                                </div>
+                                <button class="btn-cart">Đặt hàng</button>
+                            </div>
+                        </form>
+                    </div>                   
+                </div>
+
+                <!-- Xem thêm sản phẩm -->
+                <div class="aside-item">
+                    <div class="link-more">
+                        <a href="#">Xem thêm sản phẩm</a>
+                    </div>
+                </div>
+
+                <!-- Hotline liên hệ -->
+                <div class="aside-item">
+                    <div class="banner-hotline">
+                        <img src="image/banner-phone.webp" alt="">
+                        <div class="hotline-info">
+                            <p>Hỗ trợ trực tuyến</p>
+                            <span>1900 6750</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aside-item">
+                    <div class="banner-image">
+                        <a class="link-image" href="#">
+                            <img src="image/banner-2.webp" alt="banner">
+                        </a>
+                        <div class="image-hover">
+                            <img src="image/text-banner.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col c-12 12 l-9 slider">
+                <div class="grid">
+                    <div class="row">
+                        <div class="col c-12 m-12 l-12 title-catgory-product">
+                            <h2 class="content_title_all">
+                                TẤT CẢ SẢN PHẨM
+                            </h2>
+                        </div>
+
+                        <div class="col c-12 m-9 l-9 title-catgory-product">
+                            <div class="sort-cate">
+                                <label class="sort_by">Sắp xếp:</label>
+                                <ul class="ul_col">
+                                    <li>
+                                        <span style="cursor: pointer;">
+                                            Mặc định <i class="fa-solid fa-angle-down"></i>
+                                        </span>
+                                        <ul class="content_ul">
+                                            <li>
+                                                <a href="#">Mặc định</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">A → Z</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Z → A</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Giá tăng dần</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Giá giảm dần</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Hàng mới nhất</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Hàng cũ nhất</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div class="col c-0 m-3 l-3 view-mode">
+                            <a href="#" class="view_mode_grid">
+                                <i class="fa-solid fa-grip"></i>
+                                <span>Lưới</span>
+                            </a>
+
+                            <a href="#" class="view_mode_list">
+                                <i class="fa-solid fa-bars"></i>
+                                <span>Danh sách</span>
+                            </a>
+                        </div>
+
+                        <div class="col c-12 m-4 l-4 item-main" *ngFor="let item of products">
+                            <div class="item-product-main">
+                                <form action="" class="product-action">
+                                    <div class="product-thumbnail">
+                                        <a href="detailproduct.html" class="product-overlay"></a>
+                                        <a href="detailproduct.html" class="product-img-link">
+                                            <img title="Giày tây nâu đỏ thương hiệu Converse All Star"
+                                            [src]=" item.DuongDan ? ('http://localhost:8000/'+item.DuongDan) : 'assets/my-ui/image/noimg.jpg'" class="product-img" alt="">
+                                        </a>
+                                        <div class="saleright">
+                                            <span *ngIf="item.GiaKhuyenMai">- {{ solvediscount(item.Gia,item.GiaKhuyenMai) }}%</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-name">
+                                            <a routerLink="/detail/{{ item.MaSanPham }}">{{ item.TenSanPham }}</a>
+                                        </p>
+                                        <div class="price-box">
+                                            Giá {{ item.GiaKhuyenMai | number}}₫
+                                            <span class="compare-price">{{ item.Gia | number }}₫</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-action">
+                                        <button class="btn-cart">Tùy chọn</button>
+                                        <a href="#" class="link-info-pro">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                       
+
+                        <div class="col c-12 m-12 l-12 pagination">
+                            <div class="list_pagination">
+                                <a href="#">1</a>
+                                <a href="#">2</a>
+                                <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<app-footer></app-footer>
